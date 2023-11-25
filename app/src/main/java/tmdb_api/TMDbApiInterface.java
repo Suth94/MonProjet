@@ -1,7 +1,5 @@
 package tmdb_api;
 
-import com.example.helloworld.MovieDetail;
-
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
@@ -16,7 +14,7 @@ public interface TMDbApiInterface {
     );
 
     @GET("movie/{movie_id}")
-    Call<MovieDetail> getMovieDetails(
+    Call<MovieDetails> getMovieDetails(
             @Path("movie_id") int movieId,
             @Query("api_key") String apiKey
     );
