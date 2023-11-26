@@ -18,4 +18,7 @@ public interface TMDbApiInterface {
             @Path("movie_id") int movieId,
             @Query("api_key") String apiKey
     );
+
+    @GET("movie/popular")
+    Call<MovieResponse> getPopularMovies(@Query("api_key") String apiKey);
 }
