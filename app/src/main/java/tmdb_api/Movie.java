@@ -1,16 +1,14 @@
 package tmdb_api;
 
 import com.google.gson.annotations.SerializedName;
-
 public class Movie {
-
     private int movieID;
     @SerializedName("title")
     private String title;
-
     @SerializedName("overview")
     private String resume;
     private String imgPATH;
+
 
     public int getMovieID() {
         return movieID;
