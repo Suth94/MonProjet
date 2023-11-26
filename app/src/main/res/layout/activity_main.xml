@@ -62,12 +62,17 @@
             android:id="@+id/film4"
             android:layout_width="90dp"
             android:layout_height="141dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
             android:layout_marginTop="30dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
             android:layout_marginBottom="29dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/film3"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:layout_editor_absoluteX="312dp">
+            app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:id="@+id/titre4"
@@ -87,12 +92,17 @@
             android:id="@+id/film1"
             android:layout_width="90dp"
             android:layout_height="141dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
             android:layout_marginBottom="29dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/film2"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:layout_editor_absoluteX="11dp">
+            app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:id="@+id/titre1"
@@ -106,18 +116,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="113dp"
                 tools:srcCompat="@tools:sample/avatars" />
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/film2"
             android:layout_width="90dp"
             android:layout_height="141dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginLeft="9dp"
             android:layout_marginTop="30dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp"
             android:layout_marginBottom="29dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/film3"
+            app:layout_constraintStart_toEndOf="@+id/film1"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:layout_editor_absoluteX="110dp">
+            app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:id="@+id/titre2"
@@ -137,12 +153,17 @@
             android:id="@+id/film3"
             android:layout_width="90dp"
             android:layout_height="141dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
             android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginBottom="29dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/film4"
+            app:layout_constraintStart_toEndOf="@+id/film2"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:layout_editor_absoluteX="211dp">
+            app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:id="@+id/titre3"

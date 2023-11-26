@@ -2,11 +2,13 @@ package tmdb_api;
 
 import com.google.gson.annotations.SerializedName;
 public class Movie {
+    @SerializedName("id")
     private int movieID;
     @SerializedName("title")
     private String title;
     @SerializedName("overview")
     private String resume;
+    @SerializedName("poster_path")
     private String imgPATH;
 
 
@@ -20,7 +22,7 @@ public class Movie {
         return resume;
     }
     public String getImgPATH() {
-        return imgPATH;
+        return "https://image.tmdb.org/t/p/original"+imgPATH;
     }
     public void setMovieID(int movieID) {
         this.movieID = movieID;
