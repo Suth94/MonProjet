@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,7 +20,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import tmdb_api.Movie;
 import tmdb_api.MovieResponse;
-import tmdb_api.RetrofitClient;
 import tmdb_api.TMDbApiClient;
 import tmdb_api.TMDbApiInterface;
 
@@ -41,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btn = findViewById(R.id.btnMenu) ;
+        btnAccount = findViewById(R.id.btnAccount);
         film1 = findViewById(R.id.film1) ;
         film2 = findViewById(R.id.film2) ;
         film3 = findViewById(R.id.film3) ;
@@ -59,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        TMDbApiInterface tmdbApi = RetrofitClient.getRetrofitInstance().create(TMDbApiInterface.class);
+        TMDbApiInterface tmdbApi = TMDbApiClient.getClient();
         Call<MovieResponse> call = tmdbApi.getPopularMovies(TMDbApiClient.getApiKey());
 
         call.enqueue(new Callback<MovieResponse>() {
@@ -71,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
 
                     titre1.setText(movies.get(0).getTitle());
                     Glide.with(getApplicationContext()).load(movies.get(0).getImgPATH()).into(img1);
-                    Log.e("Error", movies.get(0).getImgPATH());
                     titre2.setText(movies.get(1).getTitle());
                     Glide.with(getApplicationContext()).load(movies.get(1).getImgPATH()).into(img2);
                     titre3.setText(movies.get(2).getTitle());
@@ -102,6 +100,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,MainActivity2.class));
             }
         });
+
+        btnAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent( MainActivity.this, MeConnecter.class));
+            }
+        });
+
+
         film1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
