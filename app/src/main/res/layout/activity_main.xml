@@ -87,7 +87,7 @@
 
             <ImageView
                 android:id="@+id/image4"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="113dp"
                 tools:srcCompat="@tools:sample/avatars" />
         </androidx.cardview.widget.CardView>
@@ -115,7 +115,7 @@
 
             <ImageView
                 android:id="@+id/image1"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="113dp"
                 tools:srcCompat="@tools:sample/avatars" />
 
@@ -144,7 +144,7 @@
 
             <ImageView
                 android:id="@+id/image2"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="113dp"
                 tools:srcCompat="@tools:sample/avatars" />
         </androidx.cardview.widget.CardView>
@@ -172,7 +172,7 @@
 
             <ImageView
                 android:id="@+id/image3"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="113dp"
                 tools:srcCompat="@tools:sample/avatars" />
         </androidx.cardview.widget.CardView>
