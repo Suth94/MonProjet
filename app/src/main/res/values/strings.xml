@@ -2,5 +2,6 @@
     <string name="app_name">MovieMatch</string>
     <string name="e_mail" tools:ignore="MissingTranslation">E-mail</string>
     <string name="mot_de_passe" tools:ignore="MissingTranslation">Mot de Passe</string>
-    <string name="se_connecter" tools:ignore="MissingTranslation">Veuillez rentré vos identifiants </string>
+    <string name="se_connecter" tools:ignore="MissingTranslation">Veuillez rentrer vos identifiants </string>
+    <string name="login" tools:ignore="MissingTranslation">Se connecter</string>
 </resources>
