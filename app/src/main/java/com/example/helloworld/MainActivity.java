@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
     private CardView film2;
     private CardView film3;
     private CardView film4;
-    private List<Movie> movies;
 
+    private List<Movie> movies;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,MainActivity2.class));
-
             }
         });
 
@@ -103,11 +102,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent( MainActivity.this, MeConnecter.class));
+            }
+        });
+
+
         film1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,MovieDetail.class);
-                intent.putExtra("Movie",movies.get(0));
+                intent.putExtra("movie",movies.get(0));
                 startActivity(intent);
             }
         });
@@ -115,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,MovieDetail.class);
-                intent.putExtra("Movie",movies.get(1));
+                intent.putExtra("movie",movies.get(1));
                 startActivity(intent);
             }
         });
@@ -124,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,MovieDetail.class);
-                intent.putExtra("Movie",movies.get(2));
+                intent.putExtra("movie",movies.get(2));
                 startActivity(intent);
             }
         });
@@ -133,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,MovieDetail.class);
-                intent.putExtra("Movie",movies.get(3));
+                intent.putExtra("movie",movies.get(3));
                 startActivity(intent);
             }
         });
@@ -141,4 +148,4 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        }
+}

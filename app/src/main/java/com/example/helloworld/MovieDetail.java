@@ -19,7 +19,7 @@ public class MovieDetail extends AppCompatActivity {
         setContentView(R.layout.movie_detail);
         getSupportActionBar().hide();
 
-        Movie movie = getIntent().getParcelableExtra("Movie");
+        Movie movie = getIntent().getParcelableExtra("movie");
 
         TextView txt = findViewById(R.id.summary);
         txt.setText(movie.getResume());

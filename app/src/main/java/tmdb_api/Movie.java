@@ -46,6 +46,7 @@ public class Movie implements Parcelable {
     public String getImgPATH() {
         return "https://image.tmdb.org/t/p/original"+imgPATH;
     }
+    private String getImhPATH2(){return imgPATH;}
     public void setMovieID(int movieID) {
         this.movieID = movieID;
     }
