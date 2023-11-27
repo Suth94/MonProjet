@@ -21,7 +21,6 @@ public class MeConnecter extends AppCompatActivity {
     private EditText motdepasse;
     private EditText adresse;
 
-    private
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
