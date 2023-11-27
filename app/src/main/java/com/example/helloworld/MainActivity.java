@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private CardView film2;
     private CardView film3;
     private CardView film4;
+    private List<Movie> movies;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<MovieResponse> call, Response<MovieResponse> response) {
                 if (response.isSuccessful()) {
                     MovieResponse movieResponse = response.body();
-                    List<Movie> movies = movieResponse.getResults();
+                    movies = movieResponse.getResults();
 
                     titre1.setText(movies.get(0).getTitle());
                     Glide.with(getApplicationContext()).load(movies.get(0).getImgPATH()).into(img1);
@@ -91,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,MainActivity2.class));
+
             }
         });
 
@@ -101,38 +103,38 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnAccount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent( MainActivity.this, MeConnecter.class));
-            }
-        });
-
-
         film1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,MovieDetail.class));
+                Intent intent = new Intent(MainActivity.this,MovieDetail.class);
+                intent.putExtra("Movie",movies.get(0));
+                startActivity(intent);
             }
         });
         film2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,MovieDetail.class));
+                Intent intent = new Intent(MainActivity.this,MovieDetail.class);
+                intent.putExtra("Movie",movies.get(1));
+                startActivity(intent);
             }
         });
 
         film3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,MovieDetail.class));
+                Intent intent = new Intent(MainActivity.this,MovieDetail.class);
+                intent.putExtra("Movie",movies.get(2));
+                startActivity(intent);
             }
         });
 
         film4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,MovieDetail.class));
+                Intent intent = new Intent(MainActivity.this,MovieDetail.class);
+                intent.putExtra("Movie",movies.get(3));
+                startActivity(intent);
             }
         });
     }

@@ -4,7 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+
+import tmdb_api.Movie;
 
 public class MovieDetail extends AppCompatActivity {
 
@@ -12,12 +17,18 @@ public class MovieDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.movie_detail);
+        getSupportActionBar().hide();
 
-        Intent intent = getIntent();
-        int movie_i = intent.getIntExtra("movie_id",1);
+        Movie movie = getIntent().getParcelableExtra("Movie");
 
         TextView txt = findViewById(R.id.summary);
-        txt.setText(""+movie_i);
+        txt.setText(movie.getResume());
+
+        TextView title = findViewById(R.id.movie_title);
+        title.setText(movie.getTitle());
+
+        ImageView poster = findViewById(R.id.movie_img);
+        Glide.with(getApplicationContext()).load(movie.getImgPATH()).into(poster);
     }
 
 }
