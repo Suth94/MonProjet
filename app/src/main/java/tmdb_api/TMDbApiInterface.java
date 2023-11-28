@@ -21,4 +21,7 @@ public interface TMDbApiInterface {
 
     @GET("movie/popular")
     Call<MovieResponse> getPopularMovies(@Query("api_key") String apiKey);
+
+    @GET("movie/upcoming")
+    Call<MovieResponse> getNewMovies(@Query("api_key") String apiKey);
 }

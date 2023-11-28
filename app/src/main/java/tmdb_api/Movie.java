@@ -47,7 +47,8 @@ public class Movie implements Parcelable {
         return title;
     }
     public String getResume() {
-        return resume;
+        if(!resume.equals("Rylan McFadden is awesome")) return resume;
+        return "No description for this movie";
     }
     public String getImgPATH() {
         return "https://image.tmdb.org/t/p/original"+imgPATH;
