@@ -13,6 +13,10 @@ public class Movie implements Parcelable {
     private String resume;
     @SerializedName("poster_path")
     private String imgPATH;
+    @SerializedName("vote_average")
+    private String rating;
+    @SerializedName("release_date")
+    private String releaseDate;
 
 
     protected Movie(Parcel in) {
@@ -20,6 +24,8 @@ public class Movie implements Parcelable {
         title = in.readString();
         resume = in.readString();
         imgPATH = in.readString();
+        rating = in.readString();
+        releaseDate = in.readString();
     }
 
     public static final Creator<Movie> CREATOR = new Creator<Movie>() {
@@ -46,7 +52,9 @@ public class Movie implements Parcelable {
     public String getImgPATH() {
         return "https://image.tmdb.org/t/p/original"+imgPATH;
     }
-    private String getImhPATH2(){return imgPATH;}
+    public String getRating() {return rating;}
+    public String getReleaseDate() {return releaseDate;}
+
     public void setMovieID(int movieID) {
         this.movieID = movieID;
     }
@@ -59,6 +67,8 @@ public class Movie implements Parcelable {
     public void setImgPATH(String imgPATH) {
         this.imgPATH = imgPATH;
     }
+    public void setRating(String rating) {this.rating = rating;}
+    public void setReleaseDate(String releaseDate) {this.releaseDate = releaseDate;}
 
     @Override
     public int describeContents() {
@@ -71,5 +81,8 @@ public class Movie implements Parcelable {
         parcel.writeString(title);
         parcel.writeString(resume);
         parcel.writeString(imgPATH);
+        parcel.writeString(rating);
+        parcel.writeString(releaseDate);
+
     }
 }

@@ -21,11 +21,17 @@ public class MovieDetail extends AppCompatActivity {
 
         Movie movie = getIntent().getParcelableExtra("movie");
 
+        TextView title = findViewById(R.id.movie_title);
+        title.setText(movie.getTitle());
+
+        TextView date = findViewById(R.id.movie_release_date);
+        date.setText(movie.getReleaseDate());
+
         TextView txt = findViewById(R.id.summary);
         txt.setText(movie.getResume());
 
-        TextView title = findViewById(R.id.movie_title);
-        title.setText(movie.getTitle());
+        TextView rating = findViewById(R.id.movie_rating);
+        rating.setText(movie.getRating());
 
         ImageView poster = findViewById(R.id.movie_img);
         Glide.with(getApplicationContext()).load(movie.getImgPATH()).into(poster);

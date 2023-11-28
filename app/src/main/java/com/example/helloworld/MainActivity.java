@@ -18,10 +18,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import tmdb_api.Movie;
-import tmdb_api.MovieResponse;
-import tmdb_api.TMDbApiClient;
-import tmdb_api.TMDbApiInterface;
+import tmdb_api.*;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -33,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     private CardView film2;
     private CardView film3;
     private CardView film4;
+
+    private TMDbApiClient api = new TMDbApiClient();
 
     private List<Movie> movies;
     @Override
@@ -58,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         getSupportActionBar().hide();
+
 
         TMDbApiInterface tmdbApi = TMDbApiClient.getClient();
         Call<MovieResponse> call = tmdbApi.getPopularMovies(TMDbApiClient.getApiKey());
