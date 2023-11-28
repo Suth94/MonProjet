@@ -22,6 +22,7 @@ import tmdb_api.Movie;
 import tmdb_api.MovieResponse;
 import tmdb_api.TMDbApiClient;
 import tmdb_api.TMDbApiInterface;
+import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -135,8 +136,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,MovieDetail.class));
             }
         });
+
     }
-
-
-
-        }
+}

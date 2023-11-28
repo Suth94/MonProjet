@@ -2,6 +2,10 @@
     <string name="app_name">MovieMatch</string>
     <string name="e_mail" tools:ignore="MissingTranslation">E-mail</string>
     <string name="mot_de_passe" tools:ignore="MissingTranslation">Mot de Passe</string>
-    <string name="se_connecter" tools:ignore="MissingTranslation">Veuillez rentré vos identifiants </string>
+    <string name="se_connecter" tools:ignore="MissingTranslation">Veuillez rentré vos identifiants, si vous n\'avez pas de compte sélectionnez s\'enregistrer </string>
     <string name="login" tools:ignore="MissingTranslation">Se connecter</string>
+    <string name="reecrire_mdp" tools:ignore="MissingTranslation">Réécrire votre mot de passe</string>
+    <string name="name" tools:ignore="MissingTranslation">Name</string>
+    <string name="Bienvenue" tools:ignore="MissingTranslation">Rejoins-nous et trouve ton bonheur dans notre grand catalogue de film</string>
+    <string name="register" tools:ignore="MissingTranslation">Enregistre toi !</string>
 </resources>
