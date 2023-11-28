@@ -14,27 +14,24 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="25dp"
         android:layout_marginRight="25dp"
-        android:layout_marginBottom="37dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/email"
         app:layout_constraintTop_toBottomOf="@+id/Seconnecter"
         tools:ignore="MissingConstraints" />
-
-
     <TextView
         android:id="@+id/MDP"
         android:layout_width="123dp"
-        android:layout_height="wrap_content"
+        android:layout_height="49dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
+        android:layout_marginBottom="183dp"
         android:text="@string/mot_de_passe"
-        app:layout_constraintBottom_toBottomOf="@+id/Password"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Password"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,6 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
         android:layout_marginLeft="22dp"
+        android:layout_marginTop="37dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:layout_marginBottom="196dp"
@@ -55,19 +53,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/MDP"
+        app:layout_constraintTop_toBottomOf="@+id/EmailAddress"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/email"
         android:layout_width="118dp"
-        android:layout_height="wrap_content"
+        android:layout_height="43dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
         android:text="@string/e_mail"
-        app:layout_constraintBottom_toBottomOf="@+id/EmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/Password"
         app:layout_constraintEnd_toStartOf="@+id/EmailAddress"
         app:layout_constraintHorizontal_bias="0.264"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +75,7 @@
 
     <ImageView
         android:id="@+id/Avatar"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="141dp"
         android:layout_marginLeft="141dp"
@@ -94,13 +93,13 @@
 
     <TextView
         android:id="@+id/Seconnecter"
-        android:layout_width="wrap_content"
-        android:layout_height="24dp"
-        android:layout_marginStart="110dp"
-        android:layout_marginLeft="110dp"
+        android:layout_width="292dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginLeft="78dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="111dp"
-        android:layout_marginRight="111dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
         android:layout_marginBottom="37dp"
         android:text="@string/se_connecter"
         app:layout_constraintBottom_toTopOf="@+id/EmailAddress"
@@ -108,20 +107,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Avatar"
         tools:ignore="MissingConstraints" />
-
     <Button
         android:id="@+id/button_se_connecter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="131dp"
-        android:layout_marginLeft="131dp"
-        android:layout_marginEnd="132dp"
-        android:layout_marginRight="132dp"
-        android:layout_marginBottom="99dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="232dp"
+        android:layout_marginRight="232dp"
+        android:layout_marginBottom="88dp"
         android:text="@string/login"
         app:backgroundTint="#EF0D0D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="88dp"
+        android:text="S'enregistrer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_se_connecter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

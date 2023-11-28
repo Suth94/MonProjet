@@ -25,7 +25,7 @@
 
     <TextView
         android:id="@+id/bienvenue"
-        android:layout_width="395dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
