@@ -1,7 +1,10 @@
 package tmdb_api;
 
 import com.google.gson.annotations.SerializedName;
-public class Movie {
+
+import android.os.Parcel;
+import android.os.Parcelable;
+public class Movie implements Parcelable {
     @SerializedName("id")
     private int movieID;
     @SerializedName("title")
@@ -11,6 +14,25 @@ public class Movie {
     @SerializedName("poster_path")
     private String imgPATH;
 
+
+    protected Movie(Parcel in) {
+        movieID = in.readInt();
+        title = in.readString();
+        resume = in.readString();
+        imgPATH = in.readString();
+    }
+
+    public static final Creator<Movie> CREATOR = new Creator<Movie>() {
+        @Override
+        public Movie createFromParcel(Parcel in) {
+            return new Movie(in);
+        }
+
+        @Override
+        public Movie[] newArray(int size) {
+            return new Movie[size];
+        }
+    };
 
     public int getMovieID() {
         return movieID;
@@ -24,6 +46,7 @@ public class Movie {
     public String getImgPATH() {
         return "https://image.tmdb.org/t/p/original"+imgPATH;
     }
+    private String getImhPATH2(){return imgPATH;}
     public void setMovieID(int movieID) {
         this.movieID = movieID;
     }
@@ -35,5 +58,18 @@ public class Movie {
     }
     public void setImgPATH(String imgPATH) {
         this.imgPATH = imgPATH;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(movieID);
+        parcel.writeString(title);
+        parcel.writeString(resume);
+        parcel.writeString(imgPATH);
     }
 }
