@@ -15,25 +15,25 @@
             android:name=".MovieDetail"
             android:exported="false" />
         <activity
-            android:name=".MainActivity6"
+            android:name=".PourVousActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity5"
+            android:name=".AlafficheActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity4"
+            android:name=".MeilleursNotesActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity3"
+            android:name=".GenreActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".BoutonMenuActivity"
             android:exported="false" />
         <activity
             android:name=".MeConnecter"
             android:exported="false"/>
         <activity
-            android:name=".creationcompte"
+            android:name=".Creationcompte"
             android:exported="false"/>
         <activity android:name=".MainActivity">
             <intent-filter>

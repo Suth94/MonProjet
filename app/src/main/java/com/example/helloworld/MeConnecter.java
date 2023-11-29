@@ -1,17 +1,14 @@
 package com.example.helloworld;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import java.util.ArrayList;
+
 public class MeConnecter extends AppCompatActivity {
     private TextView connect;
     private TextView password;
@@ -42,7 +39,7 @@ public class MeConnecter extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MeConnecter.this,creationcompte.class));
+                startActivity(new Intent(MeConnecter.this, Creationcompte.class));
             }
         });
 

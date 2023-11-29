@@ -8,11 +8,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity2 extends AppCompatActivity {
+public class BoutonMenuActivity extends AppCompatActivity {
 
     ListView lv;
     ArrayList<String> data;
@@ -42,16 +41,16 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l) {
                 if(pos==0){
-                    startActivity(new Intent(MainActivity2.this,MainActivity3.class));
+                    startActivity(new Intent(BoutonMenuActivity.this, GenreActivity.class));
                 }
                 if(pos==1){
-                    startActivity(new Intent(MainActivity2.this,MainActivity4.class));
+                    startActivity(new Intent(BoutonMenuActivity.this, MeilleursNotesActivity.class));
                 }
                 if(pos==2){
-                    startActivity(new Intent(MainActivity2.this,MainActivity5.class));
+                    startActivity(new Intent(BoutonMenuActivity.this, AlafficheActivity.class));
                 }
                 if(pos==3){
-                    startActivity(new Intent(MainActivity2.this,MainActivity6.class));
+                    startActivity(new Intent(BoutonMenuActivity.this, PourVousActivity.class));
                 }
             }
         });
