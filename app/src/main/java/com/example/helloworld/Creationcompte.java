@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Creationcompte extends AppCompatActivity {
     private TextView info;
@@ -22,6 +24,10 @@ public class Creationcompte extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.creationcompte);
+        /*List<String> names = new ArrayList<>();
+        List<String> emails = new ArrayList<>();
+        List<String> passwords = new ArrayList<>();*/
+
         info = findViewById(R.id.info);
         bienvenue = findViewById(R.id.bienvenue);
         name = findViewById(R.id.et_name);
@@ -36,9 +42,23 @@ public class Creationcompte extends AppCompatActivity {
         enregistrer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String check = mdp.getText().toString();
+                String Mot_De_Passe = mdp.getText().toString();
                 String check2 = confirmation_mdp.getText().toString();
-                if (check.equals(check2)){
+                /*String Name = name.getText().toString();
+                String EMAIL = email.getText().toString();
+
+                names.add(Name);
+                emails.add(EMAIL);
+                passwords.add(Mot_De_Passe);
+
+                String[] emailsTAB = emails.toArray(new String[0]);
+                String[] passwordsTAB = passwords.toArray(new String[0]);
+
+                Intent intent = new Intent(Creationcompte.this, MeConnecter.class);
+                intent.putExtra("enteredEmail", emailsTAB);
+                intent.putExtra("enteredPassword", passwordsTAB);
+                startActivity(intent);*/
+                if (Mot_De_Passe.equals(check2)){
                     startActivity(new Intent(Creationcompte.this, MainActivity.class));
                 }
                 else {

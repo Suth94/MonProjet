@@ -42,13 +42,19 @@ public class MeConnecter extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String Mot_De_Passe = motdepasse.getText().toString();
-                if (Mot_De_Passe.equals(MDP)){
+                /*Intent intent = getIntent();
+                String[] emails = intent.getStringArrayExtra("enteredEmail");
+                String[] passwords = intent.getStringArrayExtra("enteredPassword");
+                for(int i = 0; i<10; i++ ){
+                    if (Mot_De_Passe.equals(passwords[i])){*/
+                if (Mot_De_Passe.equals(MDP)) {
                     startActivity(new Intent(MeConnecter.this, MainActivity.class));
                 }
                 else {
                     password.setText("Mot de passe éroné");
                 }
             }
+
         });
         register.setOnClickListener(new View.OnClickListener() {
             @Override
