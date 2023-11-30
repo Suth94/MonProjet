@@ -36,7 +36,7 @@ public class MeConnecter extends AppCompatActivity {
         connect = findViewById(R.id.Seconnecter);
         seconnecter = findViewById(R.id.button_se_connecter);
         register = findViewById(R.id.button_register);
-        getSupportActionBar().setTitle("Se Connecter");
+        getSupportActionBar().hide();
 
         seconnecter.setOnClickListener(new View.OnClickListener() {
             @Override
