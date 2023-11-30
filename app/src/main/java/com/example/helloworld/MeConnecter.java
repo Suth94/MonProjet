@@ -22,6 +22,8 @@ public class MeConnecter extends AppCompatActivity {
 
     private Button register;
 
+    private static String MDP = "MDP";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,13 +38,24 @@ public class MeConnecter extends AppCompatActivity {
         register = findViewById(R.id.button_register);
         getSupportActionBar().setTitle("Se Connecter");
 
+        seconnecter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String Mot_De_Passe = motdepasse.getText().toString();
+                if (Mot_De_Passe.equals(MDP)){
+                    startActivity(new Intent(MeConnecter.this, MainActivity.class));
+                }
+                else {
+                    password.setText("Mot de passe éroné");
+                }
+            }
+        });
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MeConnecter.this, Creationcompte.class));
             }
+
         });
-
-
     }
 }
