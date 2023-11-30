@@ -1,19 +1,15 @@
 package com.example.helloworld;
 
-import android.media.Image;
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
-
 public class MeConnecter extends AppCompatActivity {
-
     private TextView connect;
     private TextView password;
     private TextView email;
@@ -21,6 +17,10 @@ public class MeConnecter extends AppCompatActivity {
     private EditText motdepasse;
     private EditText adresse;
 
+
+    private Button seconnecter;
+
+    private Button register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,16 @@ public class MeConnecter extends AppCompatActivity {
         email = findViewById(R.id.email);
         password = findViewById(R.id.MDP);
         connect = findViewById(R.id.Seconnecter);
+        seconnecter = findViewById(R.id.button_se_connecter);
+        register = findViewById(R.id.button_register);
         getSupportActionBar().setTitle("Se Connecter");
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MeConnecter.this, Creationcompte.class));
+            }
+        });
 
 
     }

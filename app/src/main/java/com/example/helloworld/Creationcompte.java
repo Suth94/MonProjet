@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class creationcompte extends AppCompatActivity {
+public class Creationcompte extends AppCompatActivity {
     private TextView info;
     private TextView bienvenue;
     private EditText name;

@@ -38,7 +38,7 @@
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="259dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:background="@drawable/search_view_bg"
         app:iconifiedByDefault="false"
@@ -50,132 +50,58 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/scroll"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
 
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="92dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="377dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView">
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        tools:layout_editor_absoluteX="403dp">
 
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/film4"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/film3"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/titre4"
+                android:id="@+id/textView"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:text="TextView"
-                android:textSize="12sp"
-                android:translationY="115dp" />
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="Populaires"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/image4"
-                android:layout_width="match_parent"
-                android:layout_height="113dp"
-                tools:srcCompat="@tools:sample/avatars" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/film1"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/film2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pop_film"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:scrollbars="horizontal" />
 
             <TextView
-                android:id="@+id/titre1"
+                android:id="@+id/textView2"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:text="TextView"
-                android:textSize="12sp"
-                android:translationY="115dp" />
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:text="Nouveautés"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/image1"
-                android:layout_width="match_parent"
-                android:layout_height="113dp"
-                tools:srcCompat="@tools:sample/avatars" />
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/film2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/film3"
-            app:layout_constraintStart_toEndOf="@+id/film1"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
-
-            <TextView
-                android:id="@+id/titre2"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:text="TextView"
-                android:textSize="12sp"
-                android:translationY="115dp" />
-
-            <ImageView
-                android:id="@+id/image2"
-                android:layout_width="match_parent"
-                android:layout_height="113dp"
-                tools:srcCompat="@tools:sample/avatars" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/film3"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/film4"
-            app:layout_constraintStart_toEndOf="@+id/film2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
-
-            <TextView
-                android:id="@+id/titre3"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:text="TextView"
-                android:textSize="12sp"
-                android:translationY="115dp" />
-
-            <ImageView
-                android:id="@+id/image3"
-                android:layout_width="match_parent"
-                android:layout_height="113dp"
-                tools:srcCompat="@tools:sample/avatars" />
-        </androidx.cardview.widget.CardView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/new_film"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:scrollbars="horizontal" />
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
