@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import tmdb_api.Movie;
+import Adapter.Movie;
 
 public class MovieDetail extends AppCompatActivity {
 

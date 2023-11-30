@@ -12,6 +12,8 @@ import android.widget.ImageButton;
 
 import java.util.List;
 
+import Adapter.Movie;
+import Adapter.MovieAdapter;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
