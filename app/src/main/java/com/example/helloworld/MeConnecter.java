@@ -51,7 +51,7 @@ public class MeConnecter extends AppCompatActivity {
                     startActivity(new Intent(MeConnecter.this, MainActivity.class));
                 }
                 else {
-                    password.setText("Mot de passe éroné");
+                    connect.setText("Mot de passe erroné");
                 }
             }
 
