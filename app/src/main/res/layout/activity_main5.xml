@@ -6,11 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".GenreActivity">
 
-    <ListView
-        android:id="@+id/listview_1"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="1dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:layout_editor_absoluteX="0dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pop_film"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="8dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

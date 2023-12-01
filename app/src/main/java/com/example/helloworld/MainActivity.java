@@ -1,14 +1,14 @@
 package com.example.helloworld;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
@@ -17,7 +17,9 @@ import Adapter.MovieAdapter;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import tmdb_api.*;
+import tmdb_api.MovieResponse;
+import tmdb_api.TMDbApiClient;
+import tmdb_api.TMDbApiInterface;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView new_films;
     private RecyclerView pop_films;
     private RecyclerView best_films;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         best_films = findViewById(R.id.best_film);
         best_films.setHasFixedSize(true);
+
         best_films.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
 

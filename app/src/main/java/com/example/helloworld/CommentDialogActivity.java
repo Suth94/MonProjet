@@ -27,7 +27,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
 import Adapter.Comment;
-import Firebase.FirebaseUtil;
 import me.zhanghai.android.materialratingbar.MaterialRatingBar;
 
 /**
@@ -94,16 +93,16 @@ public class CommentDialogActivity extends DialogFragment implements View.OnClic
     }
 
     public void onSubmitClicked(View view) {
-        Comment comment = new Comment(
-                FirebaseUtil.getAuth().getCurrentUser(),
-                mRatingBar.getRating(),
-                mRatingText.getText().toString());
+        //Comment comment = new Comment(
+                //FirebaseUtil.getAuth().getCurrentUser(),
+                //mRatingBar.getRating(),
+                //mRatingText.getText().toString());
 
-        if (mRatingListener != null) {
-            mRatingListener.onComment(comment);
-        }
+        //if (mRatingListener != null) {
+            //mRatingListener.onComment(comment);
+     //   }
 
-        dismiss();
+        //dismiss();
     }
 
     public void onCancelClicked(View view) {
