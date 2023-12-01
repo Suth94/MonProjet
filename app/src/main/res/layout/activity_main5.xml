@@ -14,7 +14,7 @@
         tools:layout_editor_absoluteX="0dp">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/best_film"
+            android:id="@+id/pop_film"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
