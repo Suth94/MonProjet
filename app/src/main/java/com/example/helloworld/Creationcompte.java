@@ -59,7 +59,8 @@ public class Creationcompte extends AppCompatActivity {
                 intent.putExtra("enteredPassword", passwordsTAB);
                 startActivity(intent);
                 if (Mot_De_Passe.equals(check2)){
-                    startActivity(new Intent(Creationcompte.this, MeConnecter.class));
+                    finish();
+
                 }
                 else {
                     bienvenue.setText("Les deux derniers champs doivent être identique");
