@@ -35,7 +35,7 @@ public class AlafficheActivity extends AppCompatActivity {
         pop_films.setLayoutManager(new GridLayoutManager(this, 4));
 
         TMDbApiInterface tmdbApi = TMDbApiClient.getClient();
-        Call<MovieResponse> call = tmdbApi.getBestMovies(TMDbApiClient.getApiKey());
+        Call<MovieResponse> call = tmdbApi.getPopularMovies(TMDbApiClient.getApiKey());
 
         call.enqueue(new Callback<MovieResponse>() {
             @Override
