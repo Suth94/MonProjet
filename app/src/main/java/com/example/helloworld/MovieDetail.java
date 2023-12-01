@@ -8,9 +8,12 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import Adapter.Comment;
 import Adapter.Movie;
 
 public class MovieDetail extends AppCompatActivity {
+
+    private CommentDialogActivity commentDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,5 +38,4 @@ public class MovieDetail extends AppCompatActivity {
         ImageView poster = findViewById(R.id.movie_img);
         Glide.with(getApplicationContext()).load(movie.getImgPATH()).into(poster);
     }
-
 }
