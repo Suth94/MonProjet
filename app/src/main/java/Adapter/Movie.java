@@ -1,4 +1,4 @@
-package tmdb_api;
+package Adapter;
 
 import com.google.gson.annotations.SerializedName;
 

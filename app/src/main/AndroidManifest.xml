@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld">
+
         <activity
             android:name=".MovieDetail"
             android:exported="false" />
@@ -35,7 +36,8 @@
         <activity
             android:name=".Creationcompte"
             android:exported="false"/>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

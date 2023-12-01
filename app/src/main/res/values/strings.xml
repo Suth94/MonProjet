@@ -8,4 +8,6 @@
     <string name="Bienvenue" tools:ignore="MissingTranslation">Rejoins nous et profite des avantages de la création de compte.</string>
     <string name="name" tools:ignore="MissingTranslation">Name</string>
     <string name="reecrire_mdp" tools:ignore="MissingTranslation">Confirmation du mot de passe</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

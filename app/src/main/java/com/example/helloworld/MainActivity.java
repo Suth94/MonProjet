@@ -12,6 +12,8 @@ import android.widget.ImageButton;
 
 import java.util.List;
 
+import Adapter.Movie;
+import Adapter.MovieAdapter;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -24,8 +26,10 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton btnAccount;
     private List<Movie> pop_movies;
     private List<Movie> new_movies;
+    private List<Movie> best_movies;
     private RecyclerView new_films;
     private RecyclerView pop_films;
+    private RecyclerView best_films;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +46,10 @@ public class MainActivity extends AppCompatActivity {
         pop_films = findViewById(R.id.pop_film);
         pop_films.setHasFixedSize(true);
         pop_films.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
+
+        best_films = findViewById(R.id.best_film);
+        best_films.setHasFixedSize(true);
+        best_films.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
 
     //Appel API pour les films popuplaires
@@ -78,6 +86,27 @@ public class MainActivity extends AppCompatActivity {
                     new_movies = movieResponse.getResults();
                     MovieAdapter adapter = new MovieAdapter(MainActivity.this , new_movies);
                     new_films.setAdapter(adapter);
+                } else {
+                    Log.e("Error", "Response not successful");
+                }
+            }
+
+
+            @Override
+            public void onFailure(Call<MovieResponse> call, Throwable t) {
+                Log.e("Error", "Network error: " + t.getMessage());
+            }
+        });
+
+        call = tmdbApi.getBestMovies(TMDbApiClient.getApiKey());
+        call.enqueue(new Callback<MovieResponse>() {
+            @Override
+            public void onResponse(Call<MovieResponse> call, Response<MovieResponse> response) {
+                if (response.isSuccessful()) {
+                    MovieResponse movieResponse = response.body();
+                    best_movies = movieResponse.getResults();
+                    MovieAdapter adapter = new MovieAdapter(MainActivity.this , best_movies);
+                    best_films.setAdapter(adapter);
                 } else {
                     Log.e("Error", "Response not successful");
                 }
