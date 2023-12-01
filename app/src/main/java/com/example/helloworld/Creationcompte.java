@@ -24,9 +24,9 @@ public class Creationcompte extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.creationcompte);
-        /*List<String> names = new ArrayList<>();
+        List<String> names = new ArrayList<>();
         List<String> emails = new ArrayList<>();
-        List<String> passwords = new ArrayList<>();*/
+        List<String> passwords = new ArrayList<>();
 
         info = findViewById(R.id.info);
         bienvenue = findViewById(R.id.bienvenue);
@@ -44,7 +44,7 @@ public class Creationcompte extends AppCompatActivity {
             public void onClick(View view) {
                 String Mot_De_Passe = mdp.getText().toString();
                 String check2 = confirmation_mdp.getText().toString();
-                /*String Name = name.getText().toString();
+                String Name = name.getText().toString();
                 String EMAIL = email.getText().toString();
 
                 names.add(Name);
@@ -57,9 +57,9 @@ public class Creationcompte extends AppCompatActivity {
                 Intent intent = new Intent(Creationcompte.this, MeConnecter.class);
                 intent.putExtra("enteredEmail", emailsTAB);
                 intent.putExtra("enteredPassword", passwordsTAB);
-                startActivity(intent);*/
+                startActivity(intent);
                 if (Mot_De_Passe.equals(check2)){
-                    startActivity(new Intent(Creationcompte.this, MainActivity.class));
+                    startActivity(new Intent(Creationcompte.this, MeConnecter.class));
                 }
                 else {
                     bienvenue.setText("Les deux derniers champs doivent être identique");
