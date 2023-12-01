@@ -29,7 +29,7 @@ public class MeilleursNotesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
 
-        best_films = findViewById(R.id.pop_film);
+        best_films = findViewById(R.id.best_film);
         best_films.setHasFixedSize(true);
         best_films.setLayoutManager(new GridLayoutManager(this, 4));
 

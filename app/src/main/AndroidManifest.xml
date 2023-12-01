@@ -16,6 +16,9 @@
             android:name=".MovieDetail"
             android:exported="false" />
         <activity
+            android:name=".Research"
+            android:exported="false" />
+        <activity
             android:name=".PourVousActivity"
             android:exported="false" />
         <activity

@@ -9,8 +9,7 @@ public interface TMDbApiInterface {
     @GET("search/movie")
     Call<MovieResponse> searchMovies(
             @Query("api_key") String apiKey,
-            @Query("query") String query,
-            @Query("page") int page
+            @Query("query") String query
     );
 
     @GET("movie/{movie_id}")
