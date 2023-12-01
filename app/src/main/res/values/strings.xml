@@ -5,7 +5,7 @@
     <string name="se_connecter" tools:ignore="MissingTranslation">Veuillez rentrer vos identifiants </string>
     <string name="login" tools:ignore="MissingTranslation">Se connecter</string>
     <string name="register" tools:ignore="MissingTranslation">Enregistre toi !</string>
-    <string name="Bienvenue" tools:ignore="MissingTranslation">Rejoins nous et profite des avantages de la création de comptre.</string>
+    <string name="Bienvenue" tools:ignore="MissingTranslation">Rejoins nous et profite des avantages de la création de compte.</string>
     <string name="name" tools:ignore="MissingTranslation">Name</string>
-    <string name="reecrire_mdp" tools:ignore="MissingTranslation">confirmation du mot de passe</string>
+    <string name="reecrire_mdp" tools:ignore="MissingTranslation">Confirmation du mot de passe</string>
 </resources>
