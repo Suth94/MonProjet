@@ -1,10 +1,10 @@
 package com.example.helloworld;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
@@ -16,16 +16,16 @@ public class GenreActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.genre);
 
         getSupportActionBar().setTitle("Genre");
         lv = (ListView) findViewById(R.id.listview_1);
         data = new ArrayList<>();
         data.add("Action");
-        data.add("Aventure");
-        data.add("Comédie");
-        data.add("Drame");
-        data.add("Horreur");
+        data.add("Adventure");
+        data.add("Comedy");
+        data.add("Drama");
+        data.add("Horror");
         data.add("Science-fiction");
         data.add("Thriller");
 

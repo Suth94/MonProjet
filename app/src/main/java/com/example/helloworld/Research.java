@@ -78,7 +78,7 @@ public class Research extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                // Filtrer les données en fonction du texte de recherche
+
                 return true;
             }
         });

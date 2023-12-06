@@ -1,9 +1,9 @@
 package Adapter;
 
-import com.google.gson.annotations.SerializedName;
-
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import com.google.gson.annotations.SerializedName;
 public class Movie implements Parcelable {
     @SerializedName("id")
     private int movieID;
@@ -84,6 +84,5 @@ public class Movie implements Parcelable {
         parcel.writeString(imgPATH);
         parcel.writeString(rating);
         parcel.writeString(releaseDate);
-
     }
 }

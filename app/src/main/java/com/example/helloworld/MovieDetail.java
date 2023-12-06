@@ -12,8 +12,6 @@ import Adapter.Movie;
 
 public class MovieDetail extends AppCompatActivity {
 
-    private CommentDialogActivity commentDialog;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -18,22 +18,20 @@ import tmdb_api.MovieResponse;
 import tmdb_api.TMDbApiClient;
 import tmdb_api.TMDbApiInterface;
 
-
-
-public class MeilleursNotesActivity extends AppCompatActivity {
+public class BestNotes_Activity extends AppCompatActivity {
     private RecyclerView best_films;
     private List<Movie> best_movies;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main4);
+        setContentView(R.layout.best_notes);
 
         best_films = findViewById(R.id.best_film);
         best_films.setHasFixedSize(true);
         best_films.setLayoutManager(new GridLayoutManager(this, 4));
 
-        getSupportActionBar().setTitle("Mieux notés");
+        getSupportActionBar().setTitle("Best rated");
 
         TMDbApiInterface tmdbApi = TMDbApiClient.getClient();
         Call<MovieResponse> call = tmdbApi.getBestMovies(TMDbApiClient.getApiKey());
@@ -44,7 +42,7 @@ public class MeilleursNotesActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     MovieResponse movieResponse = response.body();
                     best_movies = movieResponse.getResults();
-                    MovieAdapter adapter = new MovieAdapter(MeilleursNotesActivity.this , best_movies);
+                    MovieAdapter adapter = new MovieAdapter(BestNotes_Activity.this , best_movies);
                     best_films.setAdapter(adapter);
                 } else {
                     Log.e("Error", "Response not successful");

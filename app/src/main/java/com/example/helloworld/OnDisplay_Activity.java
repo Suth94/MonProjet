@@ -18,7 +18,7 @@ import tmdb_api.MovieResponse;
 import tmdb_api.TMDbApiClient;
 import tmdb_api.TMDbApiInterface;
 
-public class AlafficheActivity extends AppCompatActivity {
+public class OnDisplay_Activity extends AppCompatActivity {
 
     private RecyclerView pop_films;
     private List<Movie> pop_movies;
@@ -26,9 +26,9 @@ public class AlafficheActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main5);
+        setContentView(R.layout.on_display);
 
-        getSupportActionBar().setTitle("A l'affiche");
+        getSupportActionBar().setTitle("On Display");
 
         pop_films = findViewById(R.id.pop_film);
         pop_films.setHasFixedSize(true);
@@ -43,7 +43,7 @@ public class AlafficheActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     MovieResponse movieResponse = response.body();
                     pop_movies = movieResponse.getResults();
-                    MovieAdapter adapter = new MovieAdapter(AlafficheActivity.this, pop_movies);
+                    MovieAdapter adapter = new MovieAdapter(OnDisplay_Activity.this, pop_movies);
                     pop_films.setAdapter(adapter);
                 } else {
                     Log.e("Error", "Response not successful");

@@ -22,16 +22,16 @@
             android:name=".PourVousActivity"
             android:exported="false" />
         <activity
-            android:name=".AlafficheActivity"
+            android:name=".OnDisplay_Activity"
             android:exported="false" />
         <activity
-            android:name=".MeilleursNotesActivity"
+            android:name=".BestNotes_Activity"
             android:exported="false" />
         <activity
             android:name=".GenreActivity"
             android:exported="false" />
         <activity
-            android:name=".BoutonMenuActivity"
+            android:name=".BoutonMenu_Activity"
             android:exported="false" />
         <activity
             android:name=".MeConnecter"
