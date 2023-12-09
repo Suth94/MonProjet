@@ -26,8 +26,8 @@ public class BoutonMenu_Activity extends AppCompatActivity {
         lv = (ListView) findViewById(R.id.listview_1);
         data = new ArrayList<>();
         data.add("Genre");
-        data.add("Best rated");
-        data.add("On display");
+        data.add("Meilleures notes");
+        data.add("A l'affiche");
 
         adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1,

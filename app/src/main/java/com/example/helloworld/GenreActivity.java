@@ -22,10 +22,10 @@ public class GenreActivity extends AppCompatActivity {
         lv = (ListView) findViewById(R.id.listview_1);
         data = new ArrayList<>();
         data.add("Action");
-        data.add("Adventure");
-        data.add("Comedy");
-        data.add("Drama");
-        data.add("Horror");
+        data.add("Aventure");
+        data.add("Comedie");
+        data.add("Drame");
+        data.add("Horreurr");
         data.add("Science-fiction");
         data.add("Thriller");
 

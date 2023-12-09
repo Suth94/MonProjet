@@ -107,7 +107,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="30dp"
-                android:text="Les meilleurs notes"
+                android:text="Meilleures notes"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
